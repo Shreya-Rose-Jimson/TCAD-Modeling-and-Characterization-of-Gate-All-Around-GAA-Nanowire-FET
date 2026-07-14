@@ -124,24 +124,13 @@ The transfer characteristics were used to evaluate the switching behavior of the
 
 ---
 
-## Future Improvements
-
-- Simulate output characteristics (ID–VDS)
-- Perform AC analysis for gate capacitance extraction
-- Compare simulation results with additional published GAA FET designs
-- Investigate the impact of channel dimensions and oxide thickness on device performance
-
----
-
 ## References
 
-1. Published IEEE literature on Gate-All-Around (GAA) Nanowire FET architectures.
+1. G. Reddy, J. V, S. M, S. Srivastava and A. Acharya, "Self-Heating Aware Performance Investigation of Vertically and Sideway Stacked GAA Nanowire FETs at Sub-5nm Technology Node," 2026 39th International Conference on VLSI Design & 25th International Conference on Embedded Systems (VLSID), Pune, India, 2026, pp. 341-346
+
 2. Synopsys Sentaurus TCAD Documentation.
 
-> **Note:** The device architecture and dimensions were inspired by published IEEE research. The simulation setup, implementation, parameter extraction, and analysis presented in this repository were independently developed for educational and research purposes.
+**Note:** The device architecture and dimensions were inspired by published IEEE research. The simulation setup, implementation, parameter extraction, and analysis presented in this repository were independently developed for educational and research purposes.
 
 ---
 
-## License
-
-This project is intended for educational and research purposes.
