@@ -17,7 +17,6 @@ This project presents the design, simulation, and characterization of a **3D sub
 - Build a 3D Gate-All-Around Nanowire FET model
 - Implement appropriate carrier transport and mobility models
 - Simulate transfer characteristics (ID–VGS)
-- Evaluate short-channel effects
 - Extract important transistor performance metrics
 
 ---
@@ -34,68 +33,47 @@ This project presents the design, simulation, and characterization of a **3D sub
 | Simulation Tool | Synopsys Sentaurus TCAD |
 
 ---
-
 ## Physics Models
 
 The following physical models were incorporated during simulation:
 
-- Drift-Diffusion Carrier Transport
-- Fermi-Dirac Statistics
-- Doping-Dependent Mobility
-- High-Field Saturation
-- Shockley-Read-Hall (SRH) Recombination
-- Bandgap Narrowing
-- Electrostatic Modeling
-
----
-
-## Simulation Workflow
-
-```
-Device Geometry
-      │
-      ▼
-Mesh Generation
-      │
-      ▼
-Material Definition
-      │
-      ▼
-Physics Model Setup
-      │
-      ▼
-Bias Conditions
-      │
-      ▼
-Transfer Characteristics (ID–VGS)
-      │
-      ▼
-Parameter Extraction
-      │
-      ▼
-Performance Analysis
-```
-
+- Drift–Diffusion Carrier Transport
+- Fermi–Dirac Carrier Statistics
+- Ballistic Mobility Model (BalMob)
+- Philips Unified Mobility Model (PhuMob)
+- Lombardi Surface Mobility Model
+- High-Field Saturation Mobility
+- Bandgap Narrowing (Old Slotboom)
+- Shockley–Read–Hall (SRH) Recombination
+- Auger Recombination
+- Density Gradient Quantum Potential
+- Incomplete Ionization
 ---
 
 ## Results
 
 ### Device Structure
 
-> Add screenshots of the following:
+- - Cross-sectional View
+    <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8fb8cb30-60c6-4efc-a126-3e571c52f4bd" />
 
-- 3D Device Structure
-- Cross-sectional View
 - Device Mesh
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a1b4f03f-183d-4dd9-97cf-3def8967c2ef" />
+
 - Doping Profile
-- Electrostatic Potential (optional)
-- Electron Concentration (optional)
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/362a6de9-fffd-4819-a07c-cbd068d39059" />
+
+- Electrostatic Potential
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/fbf6fa3a-5b33-4c34-9614-02ea3553239e" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e8540678-9b2f-4d85-b23f-2977e85aabe1" />
+
 
 ---
 
 ### Transfer Characteristics (ID–VGS)
 
-*Insert your ID–VGS plot here.*
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6249b07e-0ad0-4efa-aea8-fbedc314451f" />
+
 
 The transfer characteristics were used to evaluate the switching behavior of the transistor and extract important electrical parameters.
 
@@ -112,43 +90,26 @@ The transfer characteristics were used to evaluate the switching behavior of the
 | Peak Transconductance (gm) | Maximum gain of the device |
 | Subthreshold Swing (SS) | Switching efficiency in the subthreshold region |
 
-> Replace the table below with your measured values.
+<img width="631" height="470" alt="image" src="https://github.com/user-attachments/assets/2033b6ab-d9ce-448b-a731-b69c3aaecea1" />
+
 
 | Parameter | Value |
 |-----------|-------|
-| Threshold Voltage (VTH) | XX V |
-| ON Current (ION) | XX A |
-| OFF Current (IOFF) | XX A |
-| ION/IOFF Ratio | XX |
-| Peak Transconductance (gm) | XX S |
-| Subthreshold Swing (SS) | XX mV/dec |
-
----
-
-## Repository Structure
-
-```
-.
-├── README.md
-├── tcad/
-│   ├── structure/
-│   ├── simulation/
-│   └── project_files/
-├── scripts/
-├── figures/
-├── results/
-└── docs/
-```
+| Threshold Voltage (VTH) | 0.2758 V (Reference Current = 1.0e-07 A) |
+| ON Current (ION) | 1.273e-04 A |
+| OFF Current (IOFF) | 6.031e-12 A |
+| ION/IOFF Ratio |  2.111e+07 |
+| Peak Transconductance (gm) | 0.000243 S |
+| Subthreshold Swing (SS) | 68.35 mV/dec |
 
 ---
 
 ## Technologies Used
 
-- Synopsys Sentaurus TCAD
-- Semiconductor Device Modeling
-- Nanowire MOSFET Simulation
-- Silicon Device Physics
-- Python (for data visualization and analysis)
+- Synopsys Sentaurus Structure Editor (SDE)
+- Synopsys Sentaurus Device (SDevice)
+- Synopsys Sentaurus Visual
+- Python (NumPy, Matplotlib) for data analysis and visualization
 
 ---
 
