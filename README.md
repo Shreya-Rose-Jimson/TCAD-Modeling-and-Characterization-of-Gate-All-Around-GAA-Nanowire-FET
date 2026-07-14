@@ -130,7 +130,5 @@ The transfer characteristics were used to evaluate the switching behavior of the
 
 2. Synopsys Sentaurus TCAD Documentation.
 
-**Note:** The device architecture and dimensions were inspired by published IEEE research. The simulation setup, implementation, parameter extraction, and analysis presented in this repository were independently developed for educational and research purposes.
-
 ---
 
